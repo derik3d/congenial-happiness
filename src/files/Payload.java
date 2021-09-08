@@ -1,5 +1,7 @@
 package files;
 
+import io.restassured.path.json.JsonPath;
+
 public class Payload {
 	
 	
@@ -82,6 +84,9 @@ public class Payload {
 		return updatePlaceDefault.replace("RRRR", placeId).replace("ZZZZ", newAddress);
 	}
 	
+	public static JsonPath rawToJson(String data) {
+		return new JsonPath(data);
+	}
 	
 	
 	
